@@ -1,0 +1,44 @@
+{
+  "1": {
+    "inputs": {
+      "image": "runpod-input.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "video": [
+        "3",
+        0
+      ],
+      "filename_prefix": "video/LTX-i2v",
+      "format": "auto",
+      "codec": "auto"
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "SaveVideo"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "model": "LTX-2 (Pro)",
+      "prompt": "camera slowly pushes in, subtle natural motion, cinematic lighting",
+      "duration": 8,
+      "resolution": "1920x1080",
+      "fps": 25,
+      "generate_audio": true
+    },
+    "class_type": "LtxvApiImageToVideo",
+    "_meta": {
+      "title": "LTXV Image To Video"
+    }
+  }
+}
